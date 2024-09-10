@@ -1,6 +1,9 @@
-// All credits of original example to Joanne Martin
-// Adapted by Andrés Pinilla
-// Universidad de los Andes, 2024
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+
+Minim minim;
+AudioPlayer player;
+FFT fft;
 
 int x = 0;
 int y = 50;
@@ -10,21 +13,27 @@ float rad;
 void setup() {
   size(900, 700);
   background(0);
-  //frameRate(10);
+
+  minim = new Minim(this);
+  player = minim.loadFile("madpix.mp3", 1024);
+  player.play();
+
+  fft = new FFT(player.bufferSize(), player.sampleRate());
 }
 
 void draw() {
-  // Simulate the audio signal with random values
-  float level = random(0, 1);
+  //background(0);
+  
+  fft.forward(player.mix);
+
+  // Use the FFT data to get a numeric value
+  float level = fft.getBand(10); // Example: get the amplitude of the 10th frequency band
 
   stroke(color(random(0, 100), random(100, 255), random(200, 255)));
   fill(255, 10);
-  // Draw ellipse in the middle of canvas
-  // Use value of level for the width and height of ellipse
-  rad = (level * width / random(2, 6));
+  rad = (level * (width / 100));
   ellipse(x, y, rad, rad);
   fill(random(255), 10);
-  //triangle(random(100), random(100), rad, rad, y+(rad*2), y+(rad/2));
 
   x += 2;
 
@@ -35,5 +44,12 @@ void draw() {
 
   if (y > height) {
     y = 0;
+    background(0);
   }
+}
+
+void stop() {
+  player.close();
+  minim.stop();
+  super.stop();
 }

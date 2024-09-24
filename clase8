@@ -1,0 +1,71 @@
+////scope global
+
+//int a =10;
+
+//void setup(){
+//  //scope local
+//  //shadowing
+//  for(int a=0; a<10; a++);{
+//    line(a,0,a, height);
+//}
+
+
+//void draw(){
+//}
+
+
+
+
+
+
+
+
+ //poner imagen
+//PImage hipo;
+//int imgSize;
+//color col;
+
+//void setup(){
+//  size(599,399);
+//  imgSize = 599*399;
+  
+//  println();
+//  //halfImage = width * height/2;
+//  hipo = loadImage("moodeng.jpg");
+//  hipo.loadPixels();
+//  noStroke();
+//}
+//void draw(){
+//col=hipo.pixels[int(random(0,imgSize))];
+//background(255);
+//fill(col);
+//ellipse(10,10,50,50);
+//  //dibujo del canvas
+ 
+//}
+
+
+PImage hipo;
+int imgSize;
+color col;
+
+void setup(){
+  size(599,399);
+  imgSize = 599*399;
+  
+  println();
+  //halfImage = width * height/2;
+  hipo = loadImage("moodeng.jpg");
+  hipo.loadPixels();
+  noStroke();
+}
+void draw(){
+for (int j=0;j<hipo.height;j++){
+  for (int i=0;i<hipo.width;i++){
+    col=hipo.pixels[int(random(0,imgSize))];
+  fill(col);
+  ellipse(i*10,j*10,200,200);
+  //dibujo del canvas
+}
+}
+}

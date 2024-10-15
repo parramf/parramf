@@ -1,0 +1,45 @@
+//Perro Toto = new Perro(50, 80, color(255, 100, 100), "ToTo", 10, 20);
+//Elefante Dobi = new Perro(50, 80, color(255, 100, 100), "ToTo", 10, 20);
+//void setup() {
+//  size(200, 200);
+//}
+
+//void draw() {
+//   toto.display();
+//   dobi.display();
+//}
+
+//// Clase Mamífero
+//class Mamífero extends Animal {
+//  int xpos, ypos;
+//  color c;
+//  String n;
+//  int size;
+//  int weight;
+
+//  Mamífero(int x, int y, color tempC, String tempN, int tempSize, int tempWeight) {
+//    xpos = x;
+//    ypos = y;
+//    c = tempC;
+//    n = tempN;
+//    size = tempSize;
+//    weight = tempWeight;
+//  }
+
+//  void display() {
+//    fill(c);
+//    ellipse(xpos, ypos, 200, 200);
+//  }
+//}
+
+//// clase Perro que extiende de Mamífero
+//class Perro extends Mamífero {
+//  Perro(int x, int y, color tempC, String tempN, int tempSize, int tempWeight) {
+//    super(x, y, tempC, tempN, tempSize, tempWeight);
+    
+//    class Elefante extends Mamífero {
+//  Elefante(int x, int y, color tempC, String tempN, int tempSize, int tempWeight) {
+//    super(x, y, tempC, tempN, tempSize, tempWeight);
+//  }
+//}
+//  }

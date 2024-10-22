@@ -1,0 +1,101 @@
+////EJEMPLO OR AND FALSE
+
+//int x = 100;
+//int y = 100;
+////posiciones iniciales
+//boolean saledepantalla = false;
+
+//void setup() {
+//  size(400, 400);
+//}
+
+//void draw() {
+//  background(255);
+//  hipo();
+
+//  // si x es mayor que el ancho o mayor que el alto, que salga de la pantalla
+//  if (x > width || x < 0 || y > height || y < 0) {
+//    saledepantalla = true;
+//    print("el hipopotamo salió de pantalla");
+//  } else {
+//    saledepantalla = false;
+//    print("el hipopotamo no sale de la pantalla");
+//  }
+
+//  // mover el hipopótamo
+//  x += 1;
+//  y += 0;
+//}
+
+//void hipo() {
+//  // cuerpo
+//  noStroke();
+//  fill(85, 85, 76);
+//  rect(x, y, 107, 53, 12);
+
+//  // cabeza
+//  rect(x + 55, y - 38, 71, 65, 12);
+
+//  // cabeza abajo
+//  fill(124, 124, 116);
+//  rect(x + 55, y + 3, 71, 24, 12);
+
+//  // orejas izq der
+//  fill(85, 85, 76);
+//  rect(x + 55, y - 47, 18, 24, 12);
+//  rect(x + 109, y - 47, 17, 24, 12);
+
+//  // ojos izq der
+//  fill(0);
+//  ellipse(x + 55, y - 4, 17, 17);
+//  ellipse(x + 125, y - 4, 17, 17);
+
+//  // nariz huecos izq der
+//  ellipse(x + 80, y + 12, 6, 6);
+//  ellipse(x + 100, y + 12, 6, 6);
+
+//  // cachetes izq der
+//  fill(188, 91, 158);
+//  ellipse(x + 63, y + 15, 20, 20);
+//  ellipse(x + 118, y + 15, 20, 20);
+
+//  // patas de izq a der
+//  fill(85, 85, 76);
+//  rect(x + 3, y + 42, 18, 31, 12);
+//  rect(x + 17, y + 42, 18, 31, 12);
+//  rect(x + 65, y + 42, 18, 31, 12);
+//  rect(x + 80, y + 42, 18, 31, 12);
+
+//  // colita
+//  ellipse(x - 1, y + 30, 17, 16);  // Cola
+//}
+
+//int a = 1;
+//int b = 21;
+//int c = 3;
+
+//int resAdicion;
+//int resSubstraccion;
+//int resMultiplicacion;
+//int resDivision;
+//int resModulo;
+
+//void setup(){
+//  resAdicion = a + b;
+
+
+//  resSubstraccion = b-c;
+
+//  resMultiplicacion= b*c;
+
+//  resModulo= b%c; //ver que numero es multiplo de que
+//  print(resModulo);
+//}
+
+
+
+
+
+
+
+//fork bomb

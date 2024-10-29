@@ -1,0 +1,76 @@
+//float data[];
+//int elements=100;
+
+
+//void setup(){
+//  size(800,300);
+//  data=new float[elements];
+   
+//   for(int i =0; i< elements; i++){
+//     data[i] = random(100);
+//   }
+//}
+//void draw(){
+//  background(255);
+  
+// for(int j = 0; j<elements; j++){
+//   noStroke();
+//   fill(100);
+//   rect(j*10,height-100,10, data[j]);
+// }
+//}
+
+//Table titanic;
+//int pasId;
+//boolean survived;
+
+//void setup(){
+//  titanic=loadTable("titanic.csv", "header");
+//  for(TableRow row: titanic.rows()) {
+//  pasId=row.getInt("PassengerId");
+//    survived=row.getInt("survived");
+//  println("el pasajero"+pasId);
+//}
+//}
+
+
+
+
+
+Table userBeha;
+int rowNumber;
+PFont font;
+
+void setup() {
+  size(500, 300);
+  userBeha=loadTable("user_behavior_dataset.csv", "header");
+  font= createFont("SansSerif", 12);
+  textFont(font);
+}
+void draw() {
+  background(255);
+  rowNumber=0;
+  for (TableRow row : userBeha.rows()) {
+    int userId=row.getInt("User ID");
+    int screenTime=row.getInt("Screen On Time (hours/day)");
+
+
+    noStroke();
+    fill(255, 100, 100);
+    textFont(font, 10);
+    text(screenTime, rowNumber*22, height-100-screenTime-2);
+
+
+rect(rowNumber,y,15,screenTime);
+    //dibujar rectangulos q representan el valor de screentime
+
+    pushMatrix();
+    translate(rowNumber * 22 +10, height -30);
+    rotate(-PI/2);
+    fill(100, 200, 200);
+    text(userId, 0, 0);
+    popMatrix();
+
+    rowNumber++;
+  }
+}
